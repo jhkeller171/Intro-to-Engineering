@@ -1,0 +1,7 @@
+{
+    "configuration": "mode=on",
+    "board": "arduino:megaavr:uno2018",
+    "port": "COM3",
+    "programmer": "medbg",
+    "sketch": "CTC GO! Part 1 Lesson 3\\Blink_Morse_Code\\Blink_Morse_Code.ino"
+}
