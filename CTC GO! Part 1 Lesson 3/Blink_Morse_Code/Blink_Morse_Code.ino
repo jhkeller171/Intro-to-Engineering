@@ -42,7 +42,8 @@ void loop() {
     digitalWrite(LED12, LOW);   // turn the LED off by making the voltage LOW
     delay(100);  
     count = count-1;   
-  }              
+  }           
+  delay(400);   
   count = 3;
   while (count>0){
     digitalWrite(LED13, HIGH);
@@ -53,6 +54,7 @@ void loop() {
     delay(400);  
     count = count-1;
   }
+  delay(400);
   count = 3;
   while (count>0){
     digitalWrite(LED13, HIGH);
