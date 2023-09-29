@@ -1,3 +1,3 @@
 # Intro-to-Engineering
 
-For enginering class, pls don't just steal my stuff
+For enginering class, pls don't steal my code/designs
