@@ -21,7 +21,6 @@
 
   https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink
 */
-
 // the setup function runs once when you press reset or power the board
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
@@ -30,12 +29,12 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  int count = 3;
+/*  int count = 3;
   while (count > 0){
     digitalWrite(LED_BUILTIN, HIGH);   
-    delay(100);                      // wait for a second
+    delay(200);                      // wait for a second
     digitalWrite(LED_BUILTIN, LOW);
-    delay(100);  
+    delay(200);  
     count = count-1;   
   }           
   delay(400);   
@@ -44,59 +43,73 @@ void loop() {
     digitalWrite(LED_BUILTIN, HIGH);
     delay(400);                      // wait for a second
     digitalWrite(LED_BUILTIN, LOW);
-    delay(400);  
+    delay(200);  
     count = count-1;
   }
   delay(400);
   count = 3;
   while (count>0){
     digitalWrite(LED_BUILTIN, HIGH);
-    delay(100);                      // wait for a second
+    delay(200);                      // wait for a second
     digitalWrite(LED_BUILTIN, LOW);
-    delay(100);  
+    delay(200);  
     count = count-1;
   }
-  delay(1000);
+  delay(2000);
+
+
+digitalWrite(LED_BUILTIN, HIGH);
+delay(5000);
+digitalWrite(LED_BUILTIN,LOW);
+//NAME PART
+*/
+
+
+
+
   //J
+  delay(1000);
   digitalWrite(LED_BUILTIN,HIGH);
-  delay(100);
-  count = 3;
+  delay(300);
+  digitalWrite(LED_BUILTIN, LOW);
+  int count = 3;
   while (count>0){
-    digitalWrite(LED_BUILTIN, LOW);
-    delay(400);
-    digitalWrite(LED_BUILTIN,HIGH);
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(600);
+    digitalWrite(LED_BUILTIN,LOW);
     count = count-1;
   }
   //A
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(100);
+  delay(1000);
   digitalWrite(LED_BUILTIN,HIGH);
-  delay(100);
+  delay(300);
   digitalWrite(LED_BUILTIN,LOW);
-  delay(100);
+  delay(300);
   digitalWrite(LED_BUILTIN,HIGH);
-  delay(400);
+  delay(600);
   digitalWrite(LED_BUILTIN,LOW);
+  delay(1000);
   //M
   digitalWrite(LED_BUILTIN,HIGH);
-  delay(400);
+  delay(600);
   digitalWrite(LED_BUILTIN,LOW);
+  delay(600);
   digitalWrite(LED_BUILTIN,HIGH);
-  delay(400);
+  delay(600);
   digitalWrite(LED_BUILTIN,LOW);
   //E
+  delay(1000);
   digitalWrite(LED_BUILTIN, HIGH);
-  delay(100);
+  delay(300);
   digitalWrite(LED_BUILTIN,LOW);
   //S
+  delay(1000);
   count = 3;
   while (count>0){
     digitalWrite(LED_BUILTIN, HIGH);
-    delay(100);                      // wait for a second
+    delay(300);                      // wait for a second
     digitalWrite(LED_BUILTIN, LOW);
-    delay(100);  
+    delay(300);  
     count = count-1;
   }
-
-
 }
