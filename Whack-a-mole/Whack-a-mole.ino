@@ -63,7 +63,7 @@ void loop()
   }else if (gameStarted == 1)
    {
     
-      blinkLED = random (1, 4);
+      blinkLED = random (4);
  
     if (blinkLED == 1)
      {
@@ -98,6 +98,26 @@ void loop()
         }
       
         else if (digitalRead(button_2) == HIGH)
+        {
+        digitalWrite(winLED, HIGH);
+        delay(300);
+        level = level + 5;
+        }
+     }
+     if (blinkLED == 3)
+     {
+      digitalWrite(yellowLED_3, HIGH);
+      delay(startLevel - level);
+      
+        
+        if (digitalRead(button_1) == HIGH || digitalRead(button_2) == HIGH)
+        {
+        digitalWrite(loseLED, HIGH);
+        delay(2000);
+        gameStarted = 0; 
+        }
+      
+        else if (digitalRead(button_3) == HIGH)
         {
         digitalWrite(winLED, HIGH);
         delay(300);
