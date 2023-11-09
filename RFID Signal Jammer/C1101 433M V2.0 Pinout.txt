@@ -1,0 +1,9 @@
+433M V2.0 Pinout
+
+1 - GND
+2 - 3V3
+3 - GD0
+4 - CS
+5 - SCK
+6 - MOSI
+7 - MISO
