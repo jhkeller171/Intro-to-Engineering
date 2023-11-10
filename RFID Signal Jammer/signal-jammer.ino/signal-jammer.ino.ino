@@ -1276,8 +1276,8 @@ while(1)
        // cc1101_setCarrierFreq(CFREQ_315);
        
         // PUT YOUR OWN FREQUENCY HERE !!!
-       // Example for 433.52 MHz jamming 
-        CC1101_setFrequency(433520000ul);   
+       // Example for 13.56 MHz jamming 
+        CC1101_setFrequency(13560000ul);   
        // CC1101_setFrequency(315000000ul);   
 
 
