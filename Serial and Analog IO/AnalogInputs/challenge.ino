@@ -20,7 +20,7 @@ void loop() {
   transLoop();
 }
 
-void senseLoop(){ //Defines Ultra Loop
+void senseLoop(){ //Defines Ultrasonic Sensor Loop
   digitalWrite(senseLED, HIGH);
   delay(analogRead(sense));
   Serial.println("Ultraosnic Sensor: " + analogRead(sense));
@@ -35,7 +35,7 @@ void transLoop(){ //Defines Phototransistor Loop
   delay(analogRead(trans));
 }
 
-void potLoop(){ //Defines Potentiamoetter Loop
+void potLoop(){ //Defines Potentiometer Loop
   digitalWrite(potLED, HIGH);
   delay(analogRead(pot));
   digitalWrite(potLED, LOW);
