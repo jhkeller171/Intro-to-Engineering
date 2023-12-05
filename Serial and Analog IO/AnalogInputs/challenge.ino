@@ -32,13 +32,13 @@ void transLoop(){ //Defines Phototransistor Loop
   digitalWrite(transLED, HIGH);
   delay(analogRead(trans));
   digitalWrite(transLED, LOW);
-  delay(analogRead(sense));
+  delay(analogRead(trans));
 }
 
 void potLoop(){ //Defines Potentiamoetter Loop
   digitalWrite(potLED, HIGH);
   delay(analogRead(pot));
   digitalWrite(potLED, LOW);
-  delay(analogRead(sense));
+  delay(analogRead(pot));
 }
 
