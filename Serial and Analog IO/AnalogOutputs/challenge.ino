@@ -34,44 +34,56 @@
   
   void loop()
   {
+    buttValue = digitalRead(button);
     // reading button state and distance
     if (Serial.available()>0){
       userNum = Serial.parseInt();
     }
-    buttValue = digitalRead(button);
+
     value = analogRead(USsensor);
     distance = value * 3;
+    if (buttValue == HIGH && userNum == keyNum)
+    {
+      alarm = 0;
+      Serial.println("Password Accepted, Alarm Disabled");
+      noTone(piezo);
+      userNum = 999;
+    } else if (userNum == 999){
+    
 
+    } else if (buttValue == HIGH && userNum != keyNum){
+      Serial.println("Wrong Key!");
+      userNum = 999;
+    }
     // setting the trigger distance
     if (distance < trigger)
     {
       alarm = 1;
     }
     // deactivating the alarm
-    else if (buttValue == HIGH && userNum == keyNum)
-    {
-      alarm = 0;
-      Serial.println("Password Accepted, Alarm Disabled");
-    } else if (buttValue == HIGH && userNum != keyNum){
-      Serial.println("Wrong Key!");
-    }
 
     // if the alarm is triggered
     if (alarm == 1)
-    {
-      tone (piezo, C_note);
-      for (int i = 0; i < 255; i++)
+    { 
+      for (int n = 255; n < 510; n++)
       {
-        analogWrite(LED, i);
+        tone (piezo, n);
+        analogWrite(LED, n-255);
+        delay(5);
+      }
+
+       
+    
+    
+
+      for (int n = 510; n > 255; n--)
+      {
+        tone (piezo, n);
+        analogWrite(LED, n-255);
         delay(5);
       }
       
-      tone (piezo, B_note);
-      for (int i = 255; i > 0; i--)
-      {
-        analogWrite(LED, i);
-        delay(5);
-      }
+    
     }
 
     //if the alarm is not triggered
