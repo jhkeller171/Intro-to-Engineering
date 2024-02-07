@@ -1,7 +1,7 @@
 #include <Servo.h>
 
 Servo servo_Standard;
-int pot = A5;
+int pot = A5; //Potentiometer in Analog 5 pin
 int greenLed = 12;
 int redLed = 11;
 int button = 10;
@@ -9,7 +9,7 @@ int potValue;
 
 void setup() {
   Serial.begin(9600);
-  servo_Standard.attach(13);
+  servo_Standard.attach(13); //Servo on digital pin 13
   pinMode(redLed, OUTPUT);
   pinMode(greenLed, OUTPUT);
   pinMode(button, INPUT);
