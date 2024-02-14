@@ -5,7 +5,6 @@ write a function called "Socrates" to compute this
 
 void setup() {
  Serial.begin(9600);
-
 }
 
 void loop() {
